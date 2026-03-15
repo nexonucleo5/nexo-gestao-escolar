@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXO – Núcleo de Execução e Orientação Acadêmica</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="d-flex layout">
+        <!-- Sidebar(Informações de abertura do layout a esquerda) -->
+        <aside class="sidebar">
+            <div>
+                <div class="logo-area d-flex align-items-center">
+                    <div class="logo-icon">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+                    <span class="logo-text">NEXO</span>
+                </div>
+
+                <nav class="menu">
+                    <div class="menu-item active">
+                        <i class="bi bi-book"></i>
+                        <span>Matérias</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <i class="bi bi-bullseye"></i>
+                        <span>Desafios</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <i class="bi bi-grid"></i>
+                        <span>Dashboard</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span>Meus Níveis e Notas</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <i class="bi bi-stars"></i>
+                        <span>Assistente de IA</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <i class="bi bi-pen"></i>
+                        <span>Correção de IA</span>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="footer-row">
+                    <span>Próxima aula</span>
+                    <div class="footer-badge">14:00</div>
+                </div>
+
+                <div class="footer-row mb-0">
+                    <span>Tarefas pendentes</span>
+                    <div class="footer-badge">3</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Conteúdo -->
+        <main class="main-content flex-grow-1">
+            <header class="topbar d-flex justify-content-between align-items-center">
+                <div>
+                    <div class="page-mini-title">Matérias</div>
+                    <div class="page-date">domingo, 15 de março de 2026</div>
+                </div>
+
+                <div class="topbar-right">
+                    <div class="notification">
+                        <i class="bi bi-bell"></i>
+                    </div>
+
+                    <div class="user-box">
+                        <img src="https://i.pravatar.cc/100?img=32" alt="Usuária" class="user-photo">
+                        <div>
+                            <div class="user-name">Ana Silva</div>
+                            <div class="user-role">Estudante</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-area">
+                <h1 class="main-title">Minhas Matérias</h1>
+                <p class="main-subtitle">Visualize suas disciplinas organizadas por nível de ensino</p>
+
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="subject-card">
+                            <div class="card-top">
+                                <div class="subject-icon green-icon">
+                                    <i class="bi bi-book"></i>
+                                </div>
+                                <div class="grade-badge">Nota: 8.5</div>
+                            </div>
+
+                            <h2 class="subject-name">Biologia</h2>
+                            <p class="subject-level">Fundamental</p>
+
+                            <div class="progress-head">
+                                <span><i class="bi bi-arrow-up-right"></i> Progresso de Conclusão</span>
+                                <strong>65%</strong>
+                            </div>
+
+                            <div class="custom-progress">
+                                <div class="custom-progress-bar" style="width: 65%;"></div>
+                            </div>
+
+                            <p class="progress-info">8 de 12 tópicos concluídos</p>
+
+                            <div class="teacher-box">
+                                <div class="teacher-icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <div>
+                                    <div class="teacher-label">Professor(a)</div>
+                                    <div class="teacher-name">Prof. Ana Costa</div>
+                                </div>
+                            </div>
+
+                            <button class="subject-btn">Acessar Disciplina</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="subject-card">
+                            <div class="card-top">
+                                <div class="subject-icon green-icon">
+                                    <i class="bi bi-book"></i>
+                                </div>
+                                <div class="grade-badge">Nota: 7.8</div>
+                            </div>
+
+                            <h2 class="subject-name">Biologia</h2>
+                            <p class="subject-level">Médio</p>
+
+                            <div class="progress-head">
+                                <span><i class="bi bi-arrow-up-right"></i> Progresso de Conclusão</span>
+                                <strong>45%</strong>
+                            </div>
+
+                            <div class="custom-progress">
+                                <div class="custom-progress-bar" style="width: 45%;"></div>
+                            </div>
+
+                            <p class="progress-info">7 de 16 tópicos concluídos</p>
+
+                            <div class="teacher-box">
+                                <div class="teacher-icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <div>
+                                    <div class="teacher-label">Professor(a)</div>
+                                    <div class="teacher-name">Prof. Carlos Silva</div>
+                                </div>
+                            </div>
+
+                            <button class="subject-btn">Acessar Disciplina</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="subject-card">
+                            <div class="card-top">
+                                <div class="subject-icon blue-icon">
+                                    <i class="bi bi-book"></i>
+                                </div>
+                                <div class="grade-badge purple-badge">Nota: 9.2</div>
+                            </div>
+
+                            <h2 class="subject-name">Matemática</h2>
+                            <p class="subject-level">Fundamental</p>
+
+                            <div class="progress-head">
+                                <span><i class="bi bi-arrow-up-right"></i> Progresso de Conclusão</span>
+                                <strong>72%</strong>
+                            </div>
+
+                            <div class="custom-progress">
+                                <div class="custom-progress-bar" style="width: 72%;"></div>
+                            </div>
+
+                            <p class="progress-info">11 de 15 tópicos concluídos</p>
+
+                            <div class="teacher-box">
+                                <div class="teacher-icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <div>
+                                    <div class="teacher-label">Professor(a)</div>
+                                    <div class="teacher-name">Profa. Maria Santos</div>
+                                </div>
+                            </div>
+
+                            <button class="subject-btn">Acessar Disciplina</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="subject-card">
+                            <div class="card-top">
+                                <div class="subject-icon blue-icon">
+                                    <i class="bi bi-book"></i>
+                                </div>
+                                <div class="grade-badge">Nota: 8</div>
+                            </div>
+
+                            <h2 class="subject-name">Matemática</h2>
+                            <p class="subject-level">Médio</p>
+
+                            <div class="progress-head">
+                                <span><i class="bi bi-arrow-up-right"></i> Progresso de Conclusão</span>
+                                <strong>58%</strong>
+                            </div>
+
+                            <div class="custom-progress">
+                                <div class="custom-progress-bar" style="width: 58%;"></div>
+                            </div>
+
+                            <p class="progress-info">9 de 15 tópicos concluídos</p>
+
+                            <div class="teacher-box">
+                                <div class="teacher-icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <div>
+                                    <div class="teacher-label">Professor(a)</div>
+                                    <div class="teacher-name">Prof. Ricardo Lima</div>
+                                </div>
+                            </div>
+
+                            <button class="subject-btn">Acessar Disciplina</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="subject-card">
+                            <div class="card-top">
+                                <div class="subject-icon purple-icon">
+                                    <i class="bi bi-book"></i>
+                                </div>
+                                <div class="grade-badge purple-badge">Nota: 9.5</div>
+                            </div>
+
+                            <h2 class="subject-name">Português</h2>
+                            <p class="subject-level">Fundamental</p>
+
+                            <div class="progress-head">
+                                <span><i class="bi bi-arrow-up-right"></i> Progresso de Conclusão</span>
+                                <strong>80%</strong>
+                            </div>
+
+                            <div class="custom-progress">
+                                <div class="custom-progress-bar" style="width: 80%;"></div>
+                            </div>
+
+                            <p class="progress-info">12 de 15 tópicos concluídos</p>
+
+                            <div class="teacher-box">
+                                <div class="teacher-icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <div>
+                                    <div class="teacher-label">Professor(a)</div>
+                                    <div class="teacher-name">Profa. Juliana Alves</div>
+                                </div>
+                            </div>
+
+                            <button class="subject-btn">Acessar Disciplina</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="subject-card">
+                            <div class="card-top">
+                                <div class="subject-icon purple-icon">
+                                    <i class="bi bi-book"></i>
+                                </div>
+                                <div class="grade-badge">Nota: 8.8</div>
+                            </div>
+
+                            <h2 class="subject-name">Português</h2>
+                            <p class="subject-level">Médio</p>
+
+                            <div class="progress-head">
+                                <span><i class="bi bi-arrow-up-right"></i> Progresso de Conclusão</span>
+                                <strong>67%</strong>
+                            </div>
+
+                            <div class="custom-progress">
+                                <div class="custom-progress-bar" style="width: 67%;"></div>
+                            </div>
+
+                            <p class="progress-info">10 de 15 tópicos concluídos</p>
+
+                            <div class="teacher-box">
+                                <div class="teacher-icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <div>
+                                    <div class="teacher-label">Professor(a)</div>
+                                    <div class="teacher-name">Prof. Eduardo Rocha</div>
+                                </div>
+                            </div>
+
+                            <button class="subject-btn">Acessar Disciplina</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
