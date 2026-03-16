@@ -1,3 +1,6 @@
+/* Remove a margem e o espaçamento padrão do navegador
+   Define a cor de fundo da página
+   Define a fonte padrão do site */
 body {
     margin: 0;
     padding: 0;
@@ -5,6 +8,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Container principal do login
+   min-height: faz ocupar pelo menos 100% da altura da tela
+   display:flex: ativa o sistema flexbox para alinhar elementos
+   justify-content:center: centraliza horizontalmente
+   align-items:center: centraliza verticalmente
+   padding: cria um espaço interno caso a tela seja pequena */
 .login-container {
     min-height: 100vh;
     display: flex;
@@ -13,6 +22,13 @@ body {
     padding: 20px;
 }
 
+/* Estilização do formulário de login
+   width: ocupa toda largura disponível
+   max-width: limita a largura máxima do formulário
+   background-color: define o fundo branco do card
+   padding: espaço interno entre borda e conteúdo
+   border-radius: arredonda os cantos
+   box-shadow: cria sombra para dar efeito de card */
 .login-form {
     width: 100%;
     max-width: 400px;
@@ -22,15 +38,25 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
+/* Título principal do login
+   font-size: tamanho da fonte
+   font-weight: deixa o texto em negrito
+   color: cor do texto
+   margin-bottom: espaço abaixo do título
+   text-align:center: centraliza o texto */
 .login-title {
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 700;
-    color: #ffffff;
+    color: #212529;
     margin-bottom: 8px;
     text-align: center;
-    background-color: #6923e6;
 }
 
+/* Subtítulo abaixo do título
+   fonte menor
+   cor mais clara
+   centralizado
+   espaço abaixo para separar dos campos */
 .login-subtitle {
     font-size: 14px;
     color: #6c757d;
@@ -38,6 +64,11 @@ body {
     margin-bottom: 25px;
 }
 
+/* Labels dos campos (Email e Senha)
+   define tamanho da fonte
+   deixa o texto em negrito
+   define cor do texto
+   cria espaçamento abaixo */
 .form-label {
     font-size: 15px;
     font-weight: 600;
@@ -45,28 +76,47 @@ body {
     margin-bottom: 8px;
 }
 
+/* Campos de entrada (input)
+   height: altura do campo
+   font-size: tamanho do texto digitado
+   border-radius: arredonda as bordas */
 .form-control {
     height: 45px;
     font-size: 14px;
     border-radius: 8px;
 }
 
+/* Estilo quando o campo está selecionado (focus)
+   box-shadow:none remove a sombra padrão do bootstrap
+   border-color define a cor da borda quando selecionado */
 .form-control:focus {
     box-shadow: none;
     border-color: #0d6efd;
 }
 
+/* Texto auxiliar (ex: não compartilharemos seu email)
+   fonte menor
+   cor mais suave
+   pequeno espaço acima */
 .form-text {
     font-size: 12px;
     color: #6c757d;
     margin-top: 6px;
 }
 
+/* Texto do checkbox
+   define tamanho da fonte
+   define cor do texto */
 .form-check-label {
     font-size: 13px;
     color: #495057;
 }
 
+/* Botão padrão
+   height: altura do botão
+   font-size: tamanho da fonte
+   font-weight: deixa o texto em negrito
+   border-radius: arredonda o botão */
 .btn {
     height: 45px;
     font-size: 15px;
@@ -74,12 +124,17 @@ body {
     border-radius: 8px;
 }
 
+/* Botão específico do login
+   background-color: cor de fundo do botão
+   border:none remove a borda padrão
+   color:white define a cor do texto */
 .btn-login{
     background-color: #7a2cff;
     border: none;
     color: white;
 }
 
+/* Cor do botão quando o mouse passa por cima (hover) */
 .btn-login:hover{
     background-color: #6923e6;
 }
