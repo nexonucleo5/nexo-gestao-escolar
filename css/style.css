@@ -1,3 +1,7 @@
+/* Define a cor de fundo da página
+   Define a fonte padrão do site
+   Remove rolagem horizontal
+   Remove margem padrão do navegador */
 body {
     background-color: #f7f7f8;
     font-family: Arial, Helvetica, sans-serif;
@@ -5,10 +9,19 @@ body {
     margin: 0;
 }
 
+/* Container geral do layout
+   min-height: faz ocupar pelo menos toda a altura da tela */
 .layout {
     min-height: 100vh;
 }
 
+/* Barra lateral (sidebar)
+   width: largura fixa da sidebar
+   background: cor de fundo
+   border-right: linha na direita para separação
+   display:flex: ativa flexbox
+   flex-direction: organiza em coluna
+   justify-content: distribui espaço entre topo e base */
 .sidebar {
     width: 320px;
     background: #f4f4f5;
@@ -18,11 +31,24 @@ body {
     justify-content: space-between;
 }
 
+/* Área do logo
+   padding: espaçamento interno
+   border-bottom: linha abaixo do logo */
 .logo-area {
     padding: 20px 28px;
     border-bottom: 1px solid #dddddf;
 }
 
+/* Ícone do logo
+   width/height: tamanho do ícone
+   border-radius: bordas arredondadas
+   background: fundo em degradê
+   display:flex: ativa flexbox
+   align-items: centraliza verticalmente
+   justify-content: centraliza horizontalmente
+   color: cor do conteúdo
+   font-size: tamanho do ícone
+   box-shadow: sombra ao redor */
 .logo-icon {
     width: 42px;
     height: 42px;
@@ -34,4 +60,73 @@ body {
     color: white;
     font-size: 20px;
     box-shadow: 0 6px 14px rgba(122, 44, 255, 0.25);
+}
+
+/* Texto do logo
+   color: cor do texto
+   font-size: tamanho da fonte
+   font-weight: deixa em negrito
+   margin-left: espaço à esquerda */
+.logo-text {
+    color: #7a2cff;
+    font-size: 19px;
+    font-weight: 700;
+    margin-left: 12px;
+}
+
+/* Menu lateral
+   padding: espaçamento interno */
+.menu {
+    padding: 18px;
+}
+
+/* Item do menu
+   display:flex: ativa flexbox
+   align-items: centraliza verticalmente
+   gap: espaço entre ícone e texto
+   padding: espaço interno
+   border-radius: arredonda os cantos
+   color: cor do texto
+   text-decoration: remove sublinhado
+   font-size: tamanho da fonte
+   font-weight: peso da fonte
+   margin-bottom: espaço entre itens */
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border-radius: 18px;
+    color: #667280;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* Sobrescreve o tamanho da fonte do menu-item
+   font-size: aumenta o tamanho do texto/ícone */
+.menu-item{
+    font-size: 25px;
+}
+
+/* Item ativo do menu
+   background: fundo em degradê
+   color: texto branco
+   box-shadow: sombra para destaque */
+menu-item.active {
+    background: linear-gradient(90deg, #7c3aed, #9333ea);
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(124, 58, 237, 0.25);
+}
+
+/* Foto do usuário
+   width/height: tamanho da imagem
+   border-radius: deixa a imagem redonda
+   object-fit: ajusta a imagem sem distorcer */
+.user-photo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
 }
