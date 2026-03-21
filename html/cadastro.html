@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,40 @@
     <!-- CSS externo -->
     <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body>
-    
+    <div class="cadastro-container m-3">
+        <form class="cadastro-form">
+            <h2 class="cadastro-title">Cadastrar Aluno</h2>
+            <div class="mb-3">
+                <lbel for="exampleInputName" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nomeHelp"
+                    placeholder="Digite o nome do aluno" required>
+            </div>
+            <div class="row">
+            <div class="col">
+                <label for="exampleInputTel" class="form-label">Telefone:</label>
+                <input type="text" class="form-control" id="exampleInputTel" aria-describedby="telHelp"
+                    placeholder="(DDD) ">
+            </div>
+             <div class="col">
+                <label for="exampleInputdate" class="form-label">Data de nascimento:</label>
+                <input type="date" class="form-control" id="exampleInputdate" aria-describedby="dataHelp" required
+>
+            </div> <br>
+            </div> <br>
+            <button type="button" class="btn btn-login w-100">Gerar acesso</button> <br> <br>
+
+            <div class=" mb-3">
+                <label for="exampleInputEmail1" class="form-label">Login:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" disabled>
+                <label for="exampleInputPassword1" class="form-label">Senha:</label>
+                <input type="" class="form-control" id="exampleInputPassword1" disabled>
+        
+            </div>
+            <button type="submit" class="btn btn-login w-100">Cadastrar</button>
+        </form>
+    </div>
 </body>
+
 </html>
