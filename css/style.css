@@ -1,7 +1,8 @@
-/* Define a cor de fundo da página
-   Define a fonte padrão do site
-   Remove rolagem horizontal
-   Remove margem padrão do navegador */
+/* Configurações globais do corpo da página
+   background-color: define a cor de fundo cinza claro
+   font-family: define a tipografia padrão
+   overflow-x: hidden: evita o surgimento de barra de rolagem horizontal
+   margin: 0: remove os espaços padrão das bordas do navegador */
 body {
     background-color: #f7f7f8;
     font-family: Arial, Helvetica, sans-serif;
@@ -9,19 +10,19 @@ body {
     margin: 0;
 }
 
-/* Container geral do layout
-   min-height: faz ocupar pelo menos toda a altura da tela */
+/* Container principal da aplicação
+   min-height: garante que o layout ocupe no mínimo 100% da altura da tela */
 .layout {
     min-height: 100vh;
 }
 
-/* Barra lateral (sidebar)
-   width: largura fixa da sidebar
-   background: cor de fundo
-   border-right: linha na direita para separação
-   display:flex: ativa flexbox
-   flex-direction: organiza em coluna
-   justify-content: distribui espaço entre topo e base */
+/* Barra lateral de navegação
+   width: define a largura fixa de 320px
+   background: cor de fundo levemente cinza
+   border-right: linha fina à direita para separação visual
+   display: flex: habilita o sistema de alinhamento Flexbox
+   flex-direction: column: empilha os elementos verticalmente
+   justify-content: space-between: empurra o menu para o topo e o footer para a base */
 .sidebar {
     width: 320px;
     background: #f4f4f5;
@@ -31,24 +32,19 @@ body {
     justify-content: space-between;
 }
 
-/* Área do logo
-   padding: espaçamento interno
-   border-bottom: linha abaixo do logo */
+/* Área que contém o logotipo
+   padding: espaçamento interno para afastar o logo das bordas
+   border-bottom: linha fina na base para separar do menu */
 .logo-area {
     padding: 20px 28px;
     border-bottom: 1px solid #dddddf;
 }
 
-/* Ícone do logo
-   width/height: tamanho do ícone
-   border-radius: bordas arredondadas
-   background: fundo em degradê
-   display:flex: ativa flexbox
-   align-items: centraliza verticalmente
-   justify-content: centraliza horizontalmente
-   color: cor do conteúdo
-   font-size: tamanho do ícone
-   box-shadow: sombra ao redor */
+/* Ícone do logotipo (o quadrado roxo)
+   border-radius: arredonda as pontas do quadrado
+   background: linear-gradient: cria um efeito de cor degradê
+   display: flex/align-items/justify-content: centraliza o ícone/letra perfeitamente
+   box-shadow: cria uma sombra suave roxa abaixo do ícone */
 .logo-icon {
     width: 42px;
     height: 42px;
@@ -62,35 +58,26 @@ body {
     box-shadow: 0 6px 14px rgba(122, 44, 255, 0.25);
 }
 
-/* Texto do logo
-   color: cor do texto
-   font-size: tamanho da fonte
-   font-weight: deixa em negrito
-   margin-left: espaço à esquerda */
+/* Texto que acompanha o logo
+   color: define a cor roxa da marca
+   font-weight: 700 deixa o texto em negrito
+   margin-left: afasta o texto do ícone quadrado */
 .logo-text {
     color: #7a2cff;
-    font-size: 19px;
     font-weight: 700;
+    font-size: 19px;
     margin-left: 12px;
 }
 
-/* Menu lateral
-   padding: espaçamento interno */
+/* Espaçamento interno do container do menu */
 .menu {
     padding: 18px;
 }
 
-/* Item do menu
-   display:flex: ativa flexbox
-   align-items: centraliza verticalmente
-   gap: espaço entre ícone e texto
-   padding: espaço interno
-   border-radius: arredonda os cantos
-   color: cor do texto
-   text-decoration: remove sublinhado
-   font-size: tamanho da fonte
-   font-weight: peso da fonte
-   margin-bottom: espaço entre itens */
+/* Itens individuais de link do menu
+   gap: cria espaço uniforme entre o ícone e o texto
+   padding: aumenta a área clicável e o respiro interno
+   border-radius: deixa os cantos do item arredondados */
 .menu-item {
     display: flex;
     align-items: center;
@@ -98,35 +85,334 @@ body {
     padding: 16px 20px;
     border-radius: 18px;
     color: #667280;
-    text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 12px;
 }
 
-/* Sobrescreve o tamanho da fonte do menu-item
-   font-size: aumenta o tamanho do texto/ícone */
-.menu-item{
-    font-size: 25px;
+/* Define o tamanho dos ícones de fonte dentro do menu */
+.menu-item i {
+    font-size: 24px;
 }
 
-/* Item ativo do menu
-   background: fundo em degradê
-   color: texto branco
-   box-shadow: sombra para destaque */
-menu-item.active {
+/* Estilo do item de menu quando estiver selecionado
+   background: aplica um degradê roxo de destaque
+   color: muda o texto para branco
+   box-shadow: adiciona brilho/sombra roxa externa */
+.menu-item.active {
     background: linear-gradient(90deg, #7c3aed, #9333ea);
-    color: #fff;
+    color: #ffffff;
     box-shadow: 0 8px 18px rgba(124, 58, 237, 0.25);
 }
 
-/* Foto do usuário
-   width/height: tamanho da imagem
-   border-radius: deixa a imagem redonda
-   object-fit: ajusta a imagem sem distorcer */
+/* Rodapé da barra lateral
+   border-top: linha fina no topo para separar do menu acima */
+.sidebar-footer {
+    border-top: 1px solid #dddddf;
+    padding: 18px 20px;
+    color: #5f6b77;
+    font-size: 16px;
+}
+
+/* Organização das linhas no footer
+   justify-content: space-between: coloca o texto num lado e a badge no outro */
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Pequena etiqueta circular no footer (badge)
+   border-radius: 999px: cria o efeito de pílula arredondada
+   min-width: garante que o círculo não achate com pouco texto */
+.footer-badge {
+    min-width: 42px;
+    height: 30px;
+    padding: 0 12px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111827;
+    font-weight: 600;
+}
+
+/* Área principal à direita da sidebar
+   flex: 1: faz com que esta div preencha todo o espaço restante horizontalmente */
+.main-content {
+    flex: 1;
+}
+
+/* Barra superior da área principal
+   background: fundo branco sólido
+   border-bottom: linha de separação inferior */
+.topbar {
+    background: #ffffff;
+    border-bottom: 1px solid #dddddf;
+    padding: 18px 30px 12px;
+}
+
+/* Título de seção na topbar */
+.page-mini-title {
+    font-size: 18px;
+    color: #111827;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+/* Texto da data na topbar */
+.page-date {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+/* Lado direito da topbar (notificações e usuário)
+   gap: 28px: espaçamento largo entre notificações e perfil */
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Container do ícone de notificação
+   position: relative: permite que o ponto vermelho se posicione em relação a este ícone */
+.notification {
+    position: relative;
+    font-size: 23px;
+    color: #111827;
+}
+
+/* O ponto vermelho de alerta na notificação
+   content: "": necessário para que o elemento virtual exista
+   position: absolute: coloca o ponto exatamente no canto superior direito do sino
+   border-radius: 50%: torna o ponto perfeitamente circular */
+.notification::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #ef4444;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    right: -2px;
+}
+
+/* Caixa com as informações do usuário */
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Foto do perfil do usuário
+   border-radius: 50%: deixa a foto redonda
+   object-fit: cover: garante que a imagem não distorça ao preencher o círculo */
 .user-photo {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Estilo para o nome do usuário */
+.user-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.1;
+}
+
+/* Estilo para o cargo/função do usuário */
+.user-role {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+/* Espaçamento da área onde ficam os cards e o conteúdo principal */
+.content-area {
+    padding: 28px 30px 40px;
+}
+
+/* Título principal da página (Ex: "Disciplinas") */
+.main-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 2px;
+}
+
+/* Subtítulo logo abaixo do título principal */
+.main-subtitle {
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+/* Card individual de disciplina
+   background: fundo branco
+   border-radius: 22px: cantos bem arredondados e modernos
+   box-shadow: sombra muito sutil para destacar levemente o card do fundo */
+.subject-card {
+    background: #ffffff;
+    border: 1px solid #e6e6e9;
+    border-radius: 22px;
+    padding: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    height: 100%;
+}
+
+/* Topo do card (ícone + badge de nota)
+   justify-content: space-between: separa ícone da etiqueta de nota */
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+/* Container circular para o ícone da matéria */
+.subject-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+}
+
+/* Variações de cores (degradês) para os ícones das matérias */
+.green-icon { background: linear-gradient(135deg, #16a34a, #22c55e); }
+.blue-icon { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+.purple-icon { background: linear-gradient(135deg, #7c3aed, #a855f7); }
+
+/* Etiqueta de nota/frequência (badge) */
+.grade-badge {
+    background: #f1f3f5;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    line-height: 1;
+}
+
+/* Versão roxa em destaque da badge */
+.purple-badge {
+    background: linear-gradient(90deg, #7c3aed, #9333ea);
+    color: white;
+}
+
+/* Nome da matéria no card */
+.subject-name {
+    font-size: 28px;
+    font-weight: 500;
+    color: #111827;
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+/* Nível ou categoria da matéria */
+.subject-level {
+    font-size: 20px;
+    color: #64748b;
+    margin-bottom: 26px;
+}
+
+/* Cabeçalho da barra de progresso (Texto de % e "Progresso") */
+.progress-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+/* Deixa o número da porcentagem em negrito e preto */
+.progress-head strong {
+    color: #111827;
+    font-size: 20px;
+}
+
+/* Fundo da barra de progresso (trilho vazio)
+   overflow: hidden: garante que o preenchimento interno respeite o arredondamento */
+.custom-progress {
+    height: 10px;
+    background: #ddd6fe;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* O preenchimento colorido da barra de progresso */
+.custom-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #6d28d9, #8b5cf6);
+}
+
+/* Texto informativo sobre as lições concluídas */
+.progress-info {
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+
+/* Caixa cinza que contém os dados do professor */
+.teacher-box {
+    background: #eef0f3;
+    border-radius: 18px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+/* Ícone/Avatar circular do professor */
+.teacher-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #e9ddff;
+    color: #7c3aed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Rótulo "Professor" pequeno acima do nome */
+.teacher-label {
+    font-size: 15px;
+    color: #6b7280;
+    line-height: 1.1;
+}
+
+/* Nome do professor em negrito */
+.teacher-name {
+    font-size: 18px;
+    color: #111827;
+    font-weight: 600;
+}
+
+/* Botão principal do card de disciplina
+   width: 100%: ocupa toda a largura do card
+   border: none: remove a borda padrão de botão
+   background: degradê roxo/magenta chamativo
+   box-shadow: sombra roxa intensa para dar elevação */
+.subject-btn {
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(90deg, #a21caf, #7e22ce, #8b00ff);
+    box-shadow: 0 8px 18px rgba(139, 0, 255, 0.25);
 }
