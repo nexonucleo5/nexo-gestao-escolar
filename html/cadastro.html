@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- CSS externo -->
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
 </head>
 
 <body>
@@ -36,16 +36,29 @@
 >
             </div> <br>
             </div> <br>
-            <button type="button" class="btn btn-login w-100">Gerar acesso</button> <br> <br>
+            <button type="button" class="btn btn-cadastro w-100">Gerar acesso</button> <br> <br>
 
             <div class=" mb-3">
-                <label for="exampleInputEmail1" class="form-label">Login:</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" disabled>
+                <label for="exampleInputEmail1" class="form-label">Login:</label> <br> 
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" disabled>  <br>
                 <label for="exampleInputPassword1" class="form-label">Senha:</label>
                 <input type="" class="form-control" id="exampleInputPassword1" disabled>
         
             </div>
-            <button type="submit" class="btn btn-login w-100">Cadastrar</button>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email do responsável:</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o email do responsavel e-mail">
+                </div>
+                 <div class="mb-3">
+                <label for="exampleInputTel" class="form-label">Telefone do responsável:</label>
+                <input type="text" class="form-control" id="exampleInputTel" aria-describedby="telHelp"
+                    placeholder="(DDD) ">
+            </div>
+            <div class="mb-3">
+                 <label for="exampleInputEmail1" class="form-label">Endereço:</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o endereço do aluno/responsável">
+            </div>
+            <button type="submit" class="btn btn-cadastro w-100">Cadastrar</button>
         </form>
     </div>
 </body>
