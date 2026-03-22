@@ -106,7 +106,7 @@ body {
 
 /* Sobrescreve o tamanho da fonte do menu-item
    font-size: aumenta o tamanho do texto/ícone */
-.menu-item{
+.menu-item i{
     font-size: 25px;
 }
 
@@ -120,6 +120,50 @@ menu-item.active {
     box-shadow: 0 8px 18px rgba(124, 58, 237, 0.25);
 }
 
+.sidebar-footer {
+    padding: 18px 20px;
+    border-top: 1px solid #dddddf;
+    color: #5f6b77;
+    font-size: 18px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-badge{
+      min-width: 42px;
+      height: 30px;
+      padding: 0 12px;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 999pxpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111827;
+      font-weight: 600;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.topbar {
+    background: #ffffff;
+    border-bottom: 1px solid #dddddf;
+    padding: 18px 30px 12px;
+}
+
+.page-mini-title {
+    font-size: 18px;
+    color: #111827;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
 /* Foto do usuário
    width/height: tamanho da imagem
    border-radius: deixa a imagem redonda
